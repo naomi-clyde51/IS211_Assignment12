@@ -63,7 +63,7 @@ $(document).ready(function () {
               response.student_id +
               ", Name: " +
               response.name +
-              ", Grade: " +
+              ", Quiz Grade: " +
               response.grade,
           );
         }
