@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Grades</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <h1 class="text-center text-3xl font-bold">Student Grades Tracker</h1>
+    <br />
+    <div class="grid grid-cols-4 gap-12">
+      <div class="col-span-1 mx-auto bg-white p-6 rounded-md shadow-md mb-6">
+        <h2 class="text-xl font-semibold mb-4">Add Student Grade</h2>
+        <input
+          type="text"
+          name="student_id"
+          placeholder="Student ID"
+          id="student_id"
+          class="border p-2 w-full mb-2"
+        />
+        <input
+          type="text"
+          name="name"
+          placeholder="Student Name"
+          id="name"
+          class="border p-2 w-full mb-2"
+        />
+        <input
+          type="text"
+          name="grade"
+          placeholder="Student Grade"
+          id="grade"
+          class="border p-2 w-full mb-2"
+        />
+        <button
+          id="add_student"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Add Student
+        </button>
+      </div>
+
+      <div class="col-span-1 mx-auto bg-white p-6 rounded-md shadow-md mb-6">
+        <h2 class="text-xl font-semibold mb-4">Update Grade</h2>
+        <input
+          type="text"
+          name="update_student_id"
+          placeholder="Student ID"
+          id="update_student_id"
+          class="border p-2 w-full mb-2"
+        />
+        <input
+          type="text"
+          name="new_grade"
+          placeholder="Student Grade"
+          id="new_grade"
+          class="border p-2 w-full mb-2"
+        />
+        <button
+          id="update_grade"
+          class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Update Student
+        </button>
+      </div>
+      
+      <div class="col-span-1 mx-auto bg-white p-6 rounded-md shadow-md mb-6">
+        <h2 class="text-xl font-semibold mb-4">Delete Student</h2>
+        <input
+          type="text"
+          name="delete_student_id"
+          placeholder="Student ID"
+          id="delete_student_id"
+          class="border p-2 w-full mb-2"
+        />
+        <button
+          id="delete_student"
+          class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Delete Student
+        </button>
+      </div>
+      <div class="col-span-1 mx-auto bg-white p-6 rounded-md shadow-md mb-6">
+        <h2 class="text-xl font-semibold mb-4">View Student</h2>
+        <input
+          type="text"
+          name="view_student_id"
+          placeholder="Student ID"
+          id="view_student_id"
+          class="border p-2 w-full mb-2"
+        />
+        <button
+          id="view_student"
+          class="bg-indigo-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          View Student
+        </button>
+        <div class="mt-4" id="student_info"></div>
+      </div>
+    </div>
+  </body>
+</html>
